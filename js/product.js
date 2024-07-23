@@ -16,24 +16,24 @@ function createContent(data) {
   console.log("ok");
   console.log(data);
   content.innerHTML = `
-     <div class="box">
-     <div>
-     <img width ="400" src= ${data.images[0]} alt="">
-     </div>
-     ${data.images.map(
-       (item) => ` <img width= "80px" src=${item} alt=""></img>`
-     )}
-     </div>
-      <div class="theme">
-      <h1 class ="title">${data.title}</h1>
-      <p class ="rect">${data.description}</p>
-        <div class="meta">
-      <p>${data.id}</p>
-  </div>
-    </div>
-      <button class ="now">Buy now</button>
-      
-      </div>
+      <div class="content__img">
+                <img width="300" src="${data.images[0]}" alt="">
+                ${data.images.map(
+                    (item) => ( `<img class="little" width="80" src=${item} alt=""></img>`
+                  ))
+                }
+               </div>
+               <div class="content__text">
+               <div class="icon">
+               <i class="fa-solid fa-heart"></i>
+               <i class="fa-solid fa-share"></i>
+                </div
+                <h2>${data.title}</h2>
+                <p>${data.description}</p>
+                <h3>Price:${data.price}$</h3>
+                <h4>Rating:${data.rating}<i class="fa-solid fa-star"></i></h4>
+                  <button>Buy now</button>
+               </div>
     
        
     `;

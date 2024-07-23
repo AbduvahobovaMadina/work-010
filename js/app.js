@@ -44,12 +44,13 @@ function createCard(data) {
   data.products.forEach((product) => {
     let cardItem = document.createElement("div");
     cardItem.classList.add("card");
+    cardItem.dataset.id = product.id;
     cardItem.innerHTML = `
         
         <img src=${product.images[0]} alt="">
         <h3>${product.title}</h3>
         <p class= "desck" title ="${product.description}">${product.description}</p>
-        <button>Buy now</button>
+        <button class="link">Buy now</button>
         `;
     wrapper.appendChild(cardItem);
   });
@@ -86,6 +87,19 @@ seemore.addEventListener("click", () => {
       fetchData(API__URL, perPageCount * offset, category);
     }
   });
+
+
+wrapper.addEventListener("click", (e) => {
+  const t = e.target.closest(".card")
+  console.log(t);
+  const id = t.dataset.id;
+  if(e.target.tagName === "IMG") {
+    window.open(`./pages/product.html?id=${id}`, "_self")
+  } else if (e.target.closest(".link")) {
+    window.open(`./pages/product.html?id=${id}`, "_self")
+  }
+});
+
 
 
 
