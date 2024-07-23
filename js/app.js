@@ -86,3 +86,8 @@ seemore.addEventListener("click", () => {
       fetchData(API__URL, perPageCount * offset, category);
     }
   });
+
+
+
+  
+ 

@@ -38,7 +38,7 @@ li{
     padding-top: 10px;
 } */
 .navbar__collection,
-.collection{
+.n__collection{
     display: flex;
     gap: 20px;
     cursor: pointer;
@@ -61,7 +61,7 @@ li{
     background-color: #fff;
 }
 
-.collection li:hover{
+.n__collection li:hover{
     color: orange;
 }
 .search img{
@@ -208,6 +208,13 @@ li{
 .btns button:hover{
     width: 60px;
 }
+
+
+
+
+.category{
+    margin-top: 160px;
+}
 .skeleton,
 .wrapper{
     padding: 50px;
@@ -219,10 +226,15 @@ li{
 .card{
     width: 350px;
     padding: 20px;
-    /* border: 1px solid #0b0b0b; */
+    border: 5px solid rgba(255, 166, 0, 0.21);
+    border-radius: 14px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    transition: .3s;
+}
+.card:hover{
+    box-shadow: 0 0 15px gray;
 }
 .desck {
     font-size: 16px;
@@ -253,7 +265,7 @@ li{
     transition: .3s;
   }
   .item:hover{
-    color: dodgerblue;
+    color: orange;
     transform: scale(1.1);
   }
 .card img{
@@ -304,6 +316,11 @@ li{
     color: #fff;
     font-weight: 600;
 }
+.card button:hover{
+    box-shadow: 0 0 10px gray;
+    transform:translate(10px, 10px);
+    cursor: pointer;
+}
 .seemore{
     margin-left: 33%;
     background: orange;
@@ -316,4 +333,41 @@ li{
     height: 50px;
     margin-top: 30px;
     transition: .3s;
+    cursor: pointer;
+}
+
+.box{
+     border: 1px solid #ddd;  
+    margin-right: 20px;
+   
+}
+.content{
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.theme{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.title{
+    font-size: 30px;
+    color: #0009;
+}
+.now{
+    padding: 5px 20px;
+    width: 25%;
+    margin: auto;
+    border-radius: 5px;
+    border: none;
+    background: blue;
+    color: #fff;
+    cursor: pointer;
+}
+.rect{
+    font-size: 16px;
+    font-weight: 400;
 }
